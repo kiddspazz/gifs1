@@ -10,8 +10,9 @@ ctx.translate(0, H);
 ctx.scale(1, -1);
 const shapeSize = 60;
 let step = 0;
+let color = 'rgb(0,255,255)';
 
-drawHectagon(canvasCenter, shapeSize, step);
+drawHectagon(canvasCenter, shapeSize, step, color);
 ring(step, 1);
 secondRing(step);
 thirdRing(step);
@@ -26,7 +27,7 @@ function tick() {
 	thirdRing(Math.ceil(step/3) - 1);
 };
 
-function drawHectagon(shapeCenter, radius, step) {
+function drawHectagon(shapeCenter, radius, step, color) {
 	let orient = step * 1/6;
 		ctx.beginPath();
 		for (let i = 0; i <= 6; i ++) {
@@ -34,7 +35,7 @@ function drawHectagon(shapeCenter, radius, step) {
 			let y = shapeCenter.y + findY(i, 6, orient) * shapeSize;
 			ctx.lineTo(x, y);
 		};
-		ctx.fillStyle = 'rgb(0,255,255)';
+		ctx.fillStyle = color;
 		ctx.fill();
 };
 
