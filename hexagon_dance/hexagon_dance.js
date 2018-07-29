@@ -5,7 +5,7 @@ let canvas = document.getElementById('canvas');
 canvas.width = W;
 canvas.height = H;
 let ctx = canvas.getContext('2d');
-//turn it into a cartesian coordinate grid
+//turn canvas into a cartesian coordinate grid
 ctx.translate(0, H);
 ctx.scale(1, -1);
 const shapeSize = 60;
