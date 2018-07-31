@@ -1,0 +1,24 @@
+:root {
+	--main-bg-color: rgb(90,90,90);
+	--light-bg-color: rgb(120,120,120);
+	--highlight-color: rgb(204,179,72);
+	--darklight-color: rgb(132,0,255);
+	--text-color: rgb(255,246,154);
+}
+
+body {
+	background-color: rgb(0,0,0);
+	color: var(--text-color);
+}
+
+div {
+	display: block;
+	margin: auto;
+}
+
+canvas {
+	display: inline;
+	margin: 0px 30px;
+	background-color: rgb(230,230,230);
+	padding: 0;
+}
